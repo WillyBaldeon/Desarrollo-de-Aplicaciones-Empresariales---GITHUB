@@ -1,0 +1,26 @@
+Alumno: Baldeón Ayala, Willy Alexis
+-----------------------------------
+
+1.11-	Ejecutamos el comando "php artisan migrate" para crear tablas en nuestra Base
+	de Datos según nuestros archivos ".php" ubicados en la carpeta "migrations".
+		(Ver imágen adjunta: "1.11 Creando Migracion de Modelos a la Base de Datos.PNG")
+
+1.12-	La migración realizada en el punto anterior tuvo como resultado la creación de
+	tablas en "gestorimagenes", lo podemos comprobar a través de PhpMyAdmin.
+		(Ver imágen adjunta: "1.12 Creando Migracion de Modelos a la Base de Datos.PNG")
+
+2.8-	Se ejecutaron los tres Seeders que creamos. De este modo, agregamos 50 registros a cada
+	tabla de nuestra Base de Datos.
+		(Ver imágenes adjuntas: "2.8.1 Creando Seeders.PNG", "2.8.2 Creando Seeders.PNG"
+		 y "2.8.3 Creando Seeders.PNG")
+
+Conclusiones
+------------
+
+->	Los proyectos en Laravel cuentan con una característica especial para poblar las Bases de Datos. Esta
+	es conocida como "migracion". Las migraciones son archivos que se encuentran el la ruta "database/migrations/"
+	y se utilizan como Scripts para crear registros.
+
+-->	Por defecto, los proyectos Laravel vienen con dos migraciones preparadas, estas son: "users_table" y
+	"password_resets_table". Nosotros podemos usarlas como también agregar nuestras propias migraciones a través
+	del comando "php artisan make:migration".

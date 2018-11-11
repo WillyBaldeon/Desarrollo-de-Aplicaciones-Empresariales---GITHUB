@@ -1,0 +1,26 @@
+Alumno: Baldeón Ayala, Willy Alexis
+-----------------------------------
+
+2.3-	Ingresamos al índice del proyecto a través de la URL: "http://gestorlaravel.com"
+		(Ver imágen adjunta: "2.3 Creando Rutas en Laravel.PNG")
+
+2.9-	Cuando intentamos acceder directamente al nodo "validado", el proyecto nos redirige a
+	"validacion/inicio" puesto que necesitamos tener una sesión activa para poder ver ese
+	apartado.
+		(Ver imágen adjunta: "2.9 Creando Rutas en Laravel.PNG")
+
+2.10-	Accedemos a los apartados "fotos" y "crear-foto" sin la necesidad de estar logeados en
+	el sistema (Ver imágenes adjuntas: "2.10.1 Creando Rutas en Laravel.PNG" y "2.10.2 Creando
+	Rutas en Laravel.PNG"). También, implementamos una excepción para cuando infresemos una url
+	inexistente (Ver imágenes adjuntas: "2.10.3 Creando Rutas en Laravel.PNG" y "2.10.1 Creando
+	Rutas en Laravel.PNG")
+
+5.1-	Al ejecutar el índice de la aplicación nos aparece un mensaje que nos indica que nos identifiquemos.
+	También, la vista se limita hasta que proporcionemos nuestras credenciales.
+		(Ver imágen adjunta: "5.1 Probando la funcionalidad del código.PNG")
+
+6.10-	Implementamos las vistas de "LogIn" y "Registro".
+		(Ver imágenes adjuntas: "6.10.1 Creado las Vistas.PNG" y "6.10.2 Creado las Vistas.PNG")
+
+Conclusiones
+------------
