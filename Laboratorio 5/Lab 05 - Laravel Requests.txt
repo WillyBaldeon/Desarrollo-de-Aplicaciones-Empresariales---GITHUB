@@ -1,0 +1,27 @@
+Alumno: Baldeón Ayala, Willy Alexis
+-----------------------------------
+
+1.14-	Habilitamos la vista "Actualizar Perfil" e implementamos su funcionamiento. Esta pantalla 
+	obtiene todos los nuevos valores proporcionados por el usuario y modifica su registro 
+	convenientemente en la base de datos. Al realizar un cambio, la página detecta la acción
+	por medio del Token "actualizado" y recarga la página mostrando un mensaje satisfactorio.
+		(Ver imágenes adjuntas: "1.14.1 Creando la Funcionalidad - Actualizar Perfil de Usuario.PNG"
+		y "1.14.2 Creando la Funcionalidad - Actualizar Perfil de Usuario.PNG")
+
+Conclusiones	
+------------
+
+->	Implementamos nuevos Requests al proyecto para que actuen sobre los Albumes y Fotos de cada
+	usuario. Estos Requests obtienen los datos correspondientes de cada usuario y los devuelve
+	a la vista respectiva.
+
+-->	Automatizamos la generación de líneas de código para la vista "albumes". Esto se llevo a cabo
+	mediante un bucle que recorre específicamente una colección de objetos y que por cada ciclo
+	agregue elementos a la vista.
+
+
+
+
+
+
+

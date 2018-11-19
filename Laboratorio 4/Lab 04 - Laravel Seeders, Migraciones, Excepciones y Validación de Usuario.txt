@@ -3,24 +3,91 @@ Alumno: Baldeón Ayala, Willy Alexis
 
 1.11-	Ejecutamos el comando "php artisan migrate" para crear tablas en nuestra Base
 	de Datos según nuestros archivos ".php" ubicados en la carpeta "migrations".
-		(Ver imágen adjunta: "1.11 Creando Migracion de Modelos a la Base de Datos.PNG")
+		(Ver imagen adjunta: "1.11 Creando Migracion de Modelos a la Base de Datos.PNG")
 
 1.12-	La migración realizada en el punto anterior tuvo como resultado la creación de
 	tablas en "gestorimagenes", lo podemos comprobar a través de PhpMyAdmin.
-		(Ver imágen adjunta: "1.12 Creando Migracion de Modelos a la Base de Datos.PNG")
+		(Ver imagen adjunta: "1.12 Creando Migracion de Modelos a la Base de Datos.PNG")
 
 2.8-	Se ejecutaron los tres Seeders que creamos. De este modo, agregamos 50 registros a cada
 	tabla de nuestra Base de Datos.
 		(Ver imágenes adjuntas: "2.8.1 Creando Seeders.PNG", "2.8.2 Creando Seeders.PNG"
 		 y "2.8.3 Creando Seeders.PNG")
 
-Conclusiones
+3.2-	Agregamos un error de tipo Token el cual es renderizado con el nombre "csrf". Cuando se
+	detecta el error, se recarga la página y se muestra en pantalla el mensaje correspondiente.
+		(Ver imagen adjunta: "3.2 Creando Mensajes y Páginas de Excepción Personalizadas.PNG")
+
+3.4-	De forma similar al punto anterior, implementamos un error de tipo Toke con el nombre "error"
+	el cual se lanza cuando intentamos logearnos con credenciales erróneas. Nuevamente, la página
+	se recarga e imprime un mensaje de advertencia.
+		(Ver imagen adjunta: "3.4 Creando Mensajes y Páginas de Excepción Personalizadas.PNG")
+
+4.5-	En términos simples, las inyecciones de dependencia son patrones de diseño en los que se
+	suministran objetos a una clase. Nuestras clases no crean los objetos que necesitan, sino que
+	se los suministra otra clase 'contenedora' que inyectará la implementación deseada.
+
+4.7-	Accedimos al sistema con los registros: "email0@test.com" y "pass0".
+		(Ver imagen adjunta: "4.7 Acceso y Validación de Usuarios.PNG")
+
+4.9-	Ahora, cuando ingresamos al sistema, el mensaje de bienvenida nos muestra el nombre del
+	usuario logeado.
+		(Ver imagen adjunta: "4.9 Acceso y Validación de Usuarios.PNG")
+
+4.11- 	Registramos un nuevo usuarios proporcionando los datos de "pregunta" y "respuesta".
+		(Ver imagen adjunta: "4.11 Acceso y Validación de Usuarios.PNG")
+
+4.12- 	El registro se almacenó correctamente en la Base de Datos.
+		(Ver imagen adjunta: "4.12 Acceso y Validación de Usuarios.PNG")
+
+6.1- 	Para crear el Request "RecuperarContrasenaRequest" tendremos que acceder a la
+	consola, ubicarnos en el proyecto "GestorImagenes" y ejecutar el comando
+	"php artisan make:request RecuperarContrasenaRequest".
+		(Ver imagen adjunta: "6.1 Creando la Funcionalidad para Recuperar la Contraseña
+		por parte del Usuario.PNG")
+
+7.1- 	El sistema nos alerta de un fallo al intentar recuperar una contraseña proporcionando
+	la pregunta o respuesta de seguridad errónea.
+		(Ver imágenes adjuntas: "7.1.1 Probando el Código.PNG y 7.1.2 Probando el Código.PNG" 
+
+7.2- 	Si proporcionamos todos los datos de forma correcta, nuestra contraseña se reestablecerá
+	satisfactoriamente y el sistema nos redirigirá al Login. Sin embargo, no contamos con ningún
+	mensaje de confirmación que nos notifique que la actualización de seguridad se llevó a cabo.
+		(Ver imágenes adjuntas: "7.2.1 Probando el Código.PNG, 7.2.2 Probando el Código.PNG y
+		7.2.3 Probando el Código.PNG" 
+
+7.4- 	Modificamos la vista de Inicio para que se muestre un aviso en pantalla una vez se detecte
+	una recuperación de contraseña.	
+		(Ver imagen adjunta: "7.4 Probando el Código.PNG" 
+
+Conclusiones	
 ------------
 
 ->	Los proyectos en Laravel cuentan con una característica especial para poblar las Bases de Datos. Esta
 	es conocida como "migracion". Las migraciones son archivos que se encuentran el la ruta "database/migrations/"
 	y se utilizan como Scripts para crear registros.
 
--->	Por defecto, los proyectos Laravel vienen con dos migraciones preparadas, estas son: "users_table" y
+-->	Al realizar inyecciones de independencias, por lo general se usan interfaces y no referencias directas
+	entre las clases puesto que sus componentes están fuertemente relacionados. Al implementar interfaces, se
+	logra abstraer la relacion entre las clases suponiendo un mejor mantenimiento de Software.
+
+--->	Por defecto, los proyectos Laravel vienen con dos migraciones preparadas, estas son: "users_table" y
 	"password_resets_table". Nosotros podemos usarlas como también agregar nuestras propias migraciones a través
 	del comando "php artisan make:migration".
+
+---->	Los archivos "blade" contienen las vistas estructuradas y sirven también para realizar redirecciones. Estos
+	archivos pueden detectar Sesiones y actuar según sea el caso.
+
+----->	Definimos dos Requests para controlar el acceso al sistema y la recuperación de contraseñas. Con ellos
+	podemos definir condiciones o "reglas" sobre la data.
+
+------>	Haciendo un recuento, hasta ahora nuestro proyecto tiene un buen sistema de Logeo que permite a los usuarios
+	acceder si recuerdan sus preguntas y respuestas de seguridad. Tambien, tiene implementado el uso de Sesiones
+	para determinar qué usuario ha accedido.
+
+
+
+
+
+
+

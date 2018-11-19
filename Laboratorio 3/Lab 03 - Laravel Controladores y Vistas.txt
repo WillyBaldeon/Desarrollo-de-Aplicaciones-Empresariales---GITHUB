@@ -12,7 +12,7 @@ Alumno: Baldeón Ayala, Willy Alexis
 2.10-	Accedemos a los apartados "fotos" y "crear-foto" sin la necesidad de estar logeados en
 	el sistema (Ver imágenes adjuntas: "2.10.1 Creando Rutas en Laravel.PNG" y "2.10.2 Creando
 	Rutas en Laravel.PNG"). También, implementamos una excepción para cuando infresemos una url
-	inexistente (Ver imágenes adjuntas: "2.10.3 Creando Rutas en Laravel.PNG" y "2.10.1 Creando
+	inexistente (Ver imágenes adjuntas: "2.10.3 Creando Rutas en Laravel.PNG" y "2.10.4 Creando
 	Rutas en Laravel.PNG")
 
 5.1-	Al ejecutar el índice de la aplicación nos aparece un mensaje que nos indica que nos identifiquemos.
@@ -24,3 +24,19 @@ Alumno: Baldeón Ayala, Willy Alexis
 
 Conclusiones
 ------------
+
+->	Comprendimos que el archivo "routes.php" sirve para redireccionar y enlazar diversos archivos.
+	Esto se hace expresando un valor de entrada (ruta) y definiendo el archivo que se encargará de responder.
+
+-->	Desarrollamos un método para saber si un usuario está o no logeado en el sistema. Para esto utilizamos
+	el archivo "Authenticate". De este modo, nuestro sistema puede actuar de maneras distintas y permitir
+	redirecciones especiales unicamente para usuarios autenticados.
+
+--->	Implementamos la excepción "404(not found page)" para que maneje situaciones en las que la URL
+	ingresada es inválida o inexistente.
+
+---->	La función "getIndex()" de cada controlador está relacionada estrechamente con el archivo "routes.php".
+	Esta función se utiliza para indicar la ruta propia para acceder al controlador.
+
+----->	Culminamos el laboratorio implementando vistas (archivos blade.php) para el Logeo y Registro de
+	nuevos usuarios.
