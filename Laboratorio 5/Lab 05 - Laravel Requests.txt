@@ -8,6 +8,20 @@ Alumno: Baldeón Ayala, Willy Alexis
 		(Ver imágenes adjuntas: "1.14.1 Creando la Funcionalidad - Actualizar Perfil de Usuario.PNG"
 		y "1.14.2 Creando la Funcionalidad - Actualizar Perfil de Usuario.PNG")
 
+2.6-	Ingresamos al sistema con el usuario "email0@test.com" el cual cuenta con 14 álbumes. Al modificar
+	el controlador de álbumes logramos acceder a la propiedad "albumes" del usuario logeado. Esto se
+	logró teniendo en cuenta las propiedades "hasMany" y "belongsTo" desarrolladas en el laboratorio 2.
+	El resultado fueron cuadros que obtienen el nombre y la descripción de cada álbum.
+		(Ver imagen adjunta: "2.6 Creando la Funcionalidad de Mostrar Álbumes.PNG")
+
+3.8-	Por medio del nuevo Request "MostrarFotosRequest" obtenemos el ID del album seleccionado y se
+	consulta si el usuario logeado tiene elementos en el album específico. En cualquier caso, somos
+	direccionados a la vista de fotos donde la interfaz cambia según sea el caso: si el album tiene
+	fotos o si no. Ingresamos al album con el ID 3 que tiene 5 fotos.
+		(Ver imagen adjunta: "3.8 Creando la Funcionalidad para Mostrar fotos.PNG")
+
+
+
 Conclusiones	
 ------------
 
@@ -15,13 +29,17 @@ Conclusiones
 	usuario. Estos Requests obtienen los datos correspondientes de cada usuario y los devuelve
 	a la vista respectiva.
 
--->	Automatizamos la generación de líneas de código para la vista "albumes". Esto se llevo a cabo
+-->	Automatizamos la generación de líneas de código para la vista "albumes". Esto lo conseguimos
 	mediante un bucle que recorre específicamente una colección de objetos y que por cada ciclo
-	agregue elementos a la vista.
+	agrega elementos a la vista.
 
+--->	Desarrollamos la vista y funcionalidad para editar la información de cada usuario. Para ello,
+	nos apoyamos en el Request creado "EditarPerfil" para validar que ningún campo quede vacío. El
+	controlador correspondiente a los usuarios se encarga de modificar los datos considerando quién
+	es el usuario logeado actualmente.
 
+----->	
 
-
-
+------>	
 
 
