@@ -5,9 +5,43 @@ Alumno: Baldeón Ayala, Willy Alexis
 	Además, al momento de realizar la redirección, se envía el ID correspondiente
 	al álbum que vamos a modificar.
 
-1.6	Esta función obtiene el id del usuario y el id del album para saber sobre qué
+1.9	Esta función obtiene el id del usuario y el id del album para saber sobre qué
 	campos se realizarán las modificaciones.
 
+1.12	Lo primero que se hace es obtener el ID del album que se editará. Luego, por medio
+	del Request correspondiente, obtendremos los datos que el usuario proporcionó para
+	ser editados. Guardamos los cambios con la función "save()" y finalmente se
+	redirige a otra vista con un mensaje de que el álbum fue alterado.
+
+1.13 	Agregamos la comprobación que detecta cuando un álbum es editado e imprime un mensaje para
+	notificar al usuario.
+		(Ver imágenes adjuntas: 1.13.1 Creando la Funcionalidad para Editar un Álbum.PNG,
+		1.13.2 Creando la Funcionalidad para Editar un Álbum.PNG y 
+		1.13.3 Creando la Funcionalidad para Editar un Álbum.PNG)
+
+1.15	Al igual que sucede con muchos métodos GET, este obtiene el ID de la foto que
+	editaremos y lo utiliza para realizar la redirección adecuada.
 
 
+1.22	La función "authorize" sirve para reconocer si la foto que vamos a eliminar pertenece al usuario
+	logeado. Primero, obtiene el ID del usuario actual junto con el ID de la foto a editar. Después,
+	con el método "find()" verificamos si la foto existe dentro algún álbum del usuario. En caso de
+	existir, se retornará "true". De lo contrario, se retornará "false". La función "rules" indica las
+	validaciones a las que está sujeto el método que lo use. En este caso, el único valor que no es
+	obligatorio es el de "imagen" porque necesariamente no se debe cambiar una foto al momento de
+	editar cualquier álbum. Los demás campos son obligatorios.
 
+1.23	La función postActualizarFoto pretende modificar los valores de una foto. Sin embargo, no se
+	limita a reemplazar la dirección de la imagen antigua por una nueva, sino que comprueba si la imagen
+	antigua aún se mantiene en la misma ruta en donde se registró por primera vez. A simple vista no
+	parece algo importante, pero, lo correcto si queremos modificar archivos subidos a una plataforma
+	es analizar toda su ruta y no solo el nombre del archivo. Si nos basaramos solo en su nombre, no
+	podríamos, por ejemplo, actualizar la foto antigua por una ubicada en la misma carpeta que la anterior.
+	Por eso, debemos verificar toda la ruta.
+
+1.24	Al cargarse la página, se comprueba si la sesión del usuario cuenta con un mensaje llamado
+	"editada". Si es así significa que la última acción que realizó el usuario fue la de editar
+	una de las fotos de el álbum actual por lo que se mostrará un aviso en la parte superior de la pantalla.
+		(Ver imágenes adjuntas: 1.24.1 Creando la Funcionalidad para Editar un Álbum.PNG,
+		1.24.2 Creando la Funcionalidad para Editar un Álbum.PNG y
+		1.24.3 Creando la Funcionalidad para Editar un Álbum.PNG)
