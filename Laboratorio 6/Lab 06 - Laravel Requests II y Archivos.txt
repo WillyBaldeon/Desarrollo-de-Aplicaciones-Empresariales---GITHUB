@@ -1,12 +1,33 @@
 Alumno: Baldeón Ayala, Willy Alexis
 -----------------------------------
 
-1.5	Agregamos un botón con referencia al apartado "albumes/actualizar-album".
-	Además, al momento de realizar la redirección, se envía el ID correspondiente
-	al álbum que vamos a modificar.
+1.9	Utilizamos las vistas creadas recientemente para crear un nuevo álbum para el usuario
+	logeado. Al momento de crear el álbum, se muestra un mensaje satisfactorio y la información
+	del álbum se carga en un recuadro.
+		(Ver imágenes adjuntas: 1.9.1 Insertando Álbumes en la Base de Datos.PNG y
+		1.9.2 Insertando Álbumes en la Base de Datos.PNG)
 
-1.6	Esta función obtiene el id del usuario y el id del album para saber sobre qué
-	campos se realizarán las modificaciones.
+2.10	Implementamos la función de agregar fotos en un álbum. Para ello, se utiliza un input
+	de tipo archivo con el que podemos cargar un archivo al sistema. Este archivo es guardado
+	mediante su ruta original la cual será almacenada en nuestro servidor.
+		(Ver imágenes adjuntas: 2.10.1 Insertando Fotos en la Base de Datos.PNG y 
+		2.10.2 Insertando Fotos en la Base de Datos.PNG)
+
+Conclusiones
+------------
+
+->	La librería Carbon es propia de Laravel y sirve para obtener la fecha actual exacta. La utilizamos
+	para registrar fotos en la base de datos y asegurarnos de que el nombre no se repetirá.
+
+-->	La función "rules()" de los archivos Request sirve para establecer lineamientos sobre los
+	parámetros que se usarán en el controlador. Es en esta función donde podemos expresar todas las
+	validaciones que queramos.
+
+--->	Podemos saber cuándo se realizó una u otra acción por parte del usuario utilizando la función "has()"
+	de "Session". De este modo, si el controlador manda un aviso con un nombre específico, desde la vista
+	podemos recibir dicho aviso y mostrarlo en pantalla como queramos.
+
+
 
 
 
