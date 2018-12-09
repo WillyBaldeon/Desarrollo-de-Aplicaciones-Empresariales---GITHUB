@@ -20,8 +20,6 @@ Alumno: Baldeón Ayala, Willy Alexis
 	fotos o si no. Ingresamos al album con el ID 3 que tiene 5 fotos.
 		(Ver imagen adjunta: "3.8 Creando la Funcionalidad para Mostrar fotos.PNG")
 
-
-
 Conclusiones	
 ------------
 
@@ -39,7 +37,5 @@ Conclusiones
 	es el usuario logeado actualmente.
 
 ----->	Definimos reglas en los archivos Requests para los campos y  variables de nuestras vistas.
-
------->	
 
 
