@@ -1,0 +1,9 @@
+Alumno: Baldeón Ayala, Willy Alexis
+-----------------------------------
+
+-.-	(Este laboratorio indica instrucciones específicas sobre el procedimiento necesario para implementar la
+	funcionalidad de editar fotos. Todas estas acciones ya las realizamos y analizamos en el laboratorio 07).
+
+
+
+
