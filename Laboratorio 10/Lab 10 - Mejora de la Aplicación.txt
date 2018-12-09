@@ -1,0 +1,69 @@
+Alumno: Baldeón Ayala, Willy Alexis
+-----------------------------------
+
+1.4	Las condiciones que agregamos al bucle para la creación de elementos en la pantalla nos
+	permitió modificar el diseño de distribución de tanto fotos como álbumes. Ahora se ven
+	organizados por tablas de 3 y 4 columnas respectivamente.
+
+1.5	Primero, el sistema reconoce cuál es el álbum que queremos eliminar, obtiene su ID y en base
+	a él carga todas las fotos que contenga el álbum. Entonces, verifica si el directorio de cada
+	foto existe, de ser así, borra el fichero correspondiente y elimina también el objeto actual.
+	Luego de eliminar cada foto almacenada en el álbum, se elimina el mismo y se redirecciona a 
+	la vista "albumes/mostrar/" con un mensaje satisfactorio a de la acción realizada. 
+
+2.5 	Probando Funciones del Sistema
+
+	~~: Podemos gestionar los albumes del usuario logeado. (Ver imágenes adjuntas:
+		2.5.1 Funcionalidad Final del Programa y
+		2.5.2 Funcionalidad Final del Programa)
+
+	~~: Podemos crear un nuevo album para el usuario logeado. (Ver imágenes adjuntas:
+		2.5.3 Funcionalidad Final del Programa y
+		2.5.4 Funcionalidad Final del Programa)
+
+	~~: Podemos crear nuevas fotos en un álbum para el usuario logeado. (Ver imágenes adjuntas:
+		2.5.5 Funcionalidad Final del Programa,
+		2.5.6 Funcionalidad Final del Programa,
+		2.5.7 Funcionalidad Final del Programa y
+		2.5.8 Funcionalidad Final del Programa)
+
+	~~: Podemos modificar la información y la imagen de la foto que queramos. (Ver imágenes adjuntas:
+		2.5.9 Funcionalidad Final del Programa y
+		2.5.10 Funcionalidad Final del Programa)
+
+	~~: Podemos eliminar fotos de un álbum. (Ver imagen adjuntas:
+		2.5.11 Funcionalidad Final del Programa)
+
+	~~: Podemos eliminar los albumes creados junto con todo su contenido. (Ver imágenes adjuntas:
+		2.5.12 Funcionalidad Final del Programa y
+		2.5.13 Funcionalidad Final del Programa)
+
+	~~: Podemos gestionar los albumes del usuario logeado. (Ver imágenes adjuntas:
+		2.5.1 Funcionalidad Final del Programa y
+		2.5.2 Funcionalidad Final del Programa)
+
+	~~: Podemos modificar la información del álbum que queramos. (Ver imagen adjunta:
+		2.5.15 Funcionalidad Final del Programa)
+
+Conclusiones	
+------------
+
+->	Desarrollamos un proyecto desde cero codificado en PHP, apoyado en el framework Laravel y fundamentado
+	por el Modelo-Vista-Controlador tradicional.
+
+-->	A lo largo de todo el desarrollo, fue muy necesario reconocer qué usuario está utilizando el sistema. Para
+	ello, utilizamos constantemente el apartado "Authentication" de Laravel, con el cual pudimos acceder a los
+	distintos campos y configuraciones de cada usuario.
+
+--->	Verificamos que el sistema es capaz de migrar todos sus registros y de reinicar todas las tablas.
+
+---->	Mejoramos la funcionalidad de eliminar álbumes. Ahora, el sistema elimina todas y cada una de las fotos que
+	se encuentren dentro de un álbum. Antes, solo se quitaba el álbum y las fotos contenidas en este quedaban
+	desenlazadas (aunque seguían siendo parte de la base de datos). 
+
+----->	Definimos dos Requests para controlar el acceso al sistema y la recuperación de contraseñas. Con ellos
+	podemos definir condiciones o "reglas" sobre la data.
+
+------>	Verdaderamente, PHP tiene mucho potencial y es muy flexible. Fue un gusto trabajar con este lenguaje y más
+	aún con Laravel, que nos brindó una estructura muy clara la cual nos permitió reconocer facilmente por dónde
+	debemos avanzar.

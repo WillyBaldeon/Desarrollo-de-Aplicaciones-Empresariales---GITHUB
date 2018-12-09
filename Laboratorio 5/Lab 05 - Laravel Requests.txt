@@ -25,7 +25,7 @@ Alumno: Baldeón Ayala, Willy Alexis
 Conclusiones	
 ------------
 
-->	Implementamos nuevos Requests al proyecto para que actuen sobre los Albumes y Fotos de cada
+->	Implementamos nuevos Requests al proyecto para que actúen sobre los Albumes y Fotos de cada
 	usuario. Estos Requests obtienen los datos correspondientes de cada usuario y los devuelve
 	a la vista respectiva.
 
@@ -38,7 +38,7 @@ Conclusiones
 	controlador correspondiente a los usuarios se encarga de modificar los datos considerando quién
 	es el usuario logeado actualmente.
 
------>	
+----->	Definimos reglas en los archivos Requests para los campos y  variables de nuestras vistas.
 
 ------>	
 
