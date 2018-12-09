@@ -1,3 +1,5 @@
+Alumno: Baldeón Ayala, Willy Alexis
+-----------------------------------
 
 1.1	No es necesario implementar un método GET a la función "eliminar" porque no necesitamos una vista esclusiva
 	para eso. Aún si quisieramos expresarle al usuario que la acción se realizó no necesitaríamos de una vista
@@ -17,14 +19,14 @@
 	está sujeto el método que lo use. En este caso, el único valor necesario para eliminar la foto es su ID, por
 	eso, el request EliminarFoto determina que ese valor es obligatorio.
 
-2.4	En términos simples, "unlink" sirve para borrar el fichero que se le indicque, "file_exists" comprueba si
+2.4	En términos simples, "unlink" sirve para borrar el fichero que se le indique, "file_exists" comprueba si
 	existe un fichero o directorio y "realpath" obtiene la ruta expandida del Path ingresado.
 
 2.5	La función PostEliminarFoto se encarga de obtener el id de la foto y verificarl si la ruta pertenciente a dicha
 	foto ya se ecuentra almacenada. Según sea, la imágen será borrada.
 
-
-
+Conclusiones	
+------------
 
 ->	Es muy importante que las vistas sean utilizadas para enviar data importante sobre ciertos aspectos con los
 	que pueda actuar el controlador.
