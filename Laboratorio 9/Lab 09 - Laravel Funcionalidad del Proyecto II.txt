@@ -1,0 +1,44 @@
+
+1.1	No es necesario implementar un método GET a la función "eliminar" porque no necesitamos una vista esclusiva
+	para eso. Aún si quisieramos expresarle al usuario que la acción se realizó no necesitaríamos de una vista
+	enteramente para eso, podríamos indicarlo mediante un corto mensaje sobre la vista donde se efectuó la 
+	eliminación.
+
+1.6	Eliminamos el álbum "Nombre Album 1" perteneciente al usuario "Usuario0". (Ver imágenes adjuntas:
+		1.6.1 Creando la Funcionalidad para Eliminar Álbumes.PNG y
+		1.6.2 Creando la Funcionalidad para Eliminar Álbumes.PNG)
+
+2.4	Primero, la función "authorize" sirve para reconocer si la foto que vamos a eliminar pertenece al usuario
+	logeado. Para realizar esto a cabo, primero se obtiene el ID del usuario actual junto con el ID de la foto
+	en cuestión. Después, con el método "find()" verificamos si la foto existe dentro algún álbum del usuario.
+	En caso de existir, se retornará "true". De lo contrario, se retornará "false".
+	
+	Por otra parte, la función "rules", al igual que en los demás requests, indica las validaciones a las que
+	está sujeto el método que lo use. En este caso, el único valor necesario para eliminar la foto es su ID, por
+	eso, el request EliminarFoto determina que ese valor es obligatorio.
+
+2.4	En términos simples, "unlink" sirve para borrar el fichero que se le indicque, "file_exists" comprueba si
+	existe un fichero o directorio y "realpath" obtiene la ruta expandida del Path ingresado.
+
+2.5	La función PostEliminarFoto se encarga de obtener el id de la foto y verificarl si la ruta pertenciente a dicha
+	foto ya se ecuentra almacenada. Según sea, la imágen será borrada.
+
+
+
+
+->	Es muy importante que las vistas sean utilizadas para enviar data importante sobre ciertos aspectos con los
+	que pueda actuar el controlador.
+
+-->	Reconocimos funciones que tienen acción directa en archivos y sus rutas.
+
+--->	Agregamos elementos ocultos en la composición de la vista del sistema. Estos elementos sirven únicamente para
+	obtener información muy puntual sobre valores dentro del sistema.
+
+----->	Por lo general, cada apartado de un sistema en CRUD debería contar con métodos GET y POST. Sin embargo,
+	la función DELETE en su forma más básica sólo necesita un método POST, pues la acción que efectúa solo
+	necesita de un campo fundamental para reconocer el registro a eliminar. Este campo puede conseguirlo de
+	distintos modos no solo con un método GET. En este caso, el campo fundamental fue el ID de la foto o del
+	álbum y lo obtuvimos por medio del request correspondiente.
+
+------>	Implementamos las operaciones CRUD faltantes en nuestro proyecto, por lo que ahora podemos darlo por concluído
+	respecto a funcionalidades.
